@@ -55,7 +55,11 @@ def sync_rules():
     # 处理每个规则
     for rule_name, rule_config in config['rule-providers'].items():
         url = rule_config['url']
-        output_path = os.path.join(".", os.path.basename(urlparse(url).path))
+        # 修改输出路径逻辑，保持原始目录结构
+        parsed_url = urlparse(url)
+        path_parts = parsed_url.path.lstrip('/').split('/')
+        output_path = os.path.join(".", *path_parts)
+        print(f"Processing {url} -> {output_path}")
         
         try:
             # 下载规则文件
