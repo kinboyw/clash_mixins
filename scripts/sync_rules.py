@@ -52,9 +52,9 @@ def sync_rules():
     processor = RuleProcessor()
     
     # 处理每个规则
-    for rule in config['rules']:
-        url = rule['url']
-        output_path = rule['output']
+    for rule_name, rule_config in config['rule-providers'].items():
+        url = rule_config['url']
+        output_path = rule_config['path']
         
         try:
             # 下载规则文件
