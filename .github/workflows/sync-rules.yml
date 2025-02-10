@@ -42,7 +42,7 @@ jobs:
           git commit -m "chore: sync rules $(date +'%Y-%m-%d')" || exit 0
       
       - name: Push changes
-        uses: ad-m/github-push-action@v4
+        uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: main
