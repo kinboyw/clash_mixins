@@ -12,15 +12,15 @@ class RuleProcessor:
         content = RuleProcessor.filter_DOMAIN_REGEX(content)
         return content
 
-        # 过滤DOMAIN-REGEX类型的规则，因为客户端目前不支持
-		@staticmethod
-		def filter_DOMAIN_REGEX(content: str) -> str:
-			lines = content.splitlines()
-			processed_lines = [
-				line for line in lines 
-				if not 'DOMAIN-REGEX' in line
-			]
-			return '\n'.join(processed_lines)
+    # 过滤DOMAIN-REGEX类型的规则，因为客户端目前不支持
+    @staticmethod
+    def filter_DOMAIN_REGEX(content: str) -> str:
+        lines = content.splitlines()
+        processed_lines = [
+            line for line in lines 
+            if not 'DOMAIN-REGEX' in line
+        ]
+        return '\n'.join(processed_lines)
 
 def ensure_directory(filepath: str) -> None:
     """确保输出目录存在"""
