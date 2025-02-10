@@ -2,6 +2,7 @@ import os
 import yaml
 import requests
 from typing import List, Callable
+from urllib.parse import urlparse 
 
 class RuleProcessor:
     @staticmethod
