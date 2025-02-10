@@ -9,17 +9,35 @@ class RuleProcessor:
         """
         处理规则的基础函数，可以在这里添加自定义的处理逻辑
         """
-        content = RuleProcessor.filter_DOMAIN_REGEX(content)
+        content = RuleProcessor.filter_unsupported_rules(content)
         return content
 
-    # 过滤DOMAIN-REGEX类型的规则，因为客户端目前不支持
+    # 过滤不支持的规则
     @staticmethod
-    def filter_DOMAIN_REGEX(content: str) -> str:
+    def filter_unsupported_rules(content: str) -> str:
+        """
+        过滤不支持的规则类型,包括DOMAIN-REGEX和IP-ASN
+        
+        Args:
+            content: 包含规则的字符串内容
+            
+        Returns:
+            过滤后的规则内容字符串
+        """
+        # 定义不支持的规则类型
+        unsupported_rules = ['DOMAIN-REGEX', 'IP-ASN']
+        
+        # 按行分割内容
         lines = content.splitlines()
-        processed_lines = [
-            line for line in lines 
-            if not 'DOMAIN-REGEX' in line
-        ]
+        
+        # 过滤掉包含不支持规则的行
+        processed_lines = []
+        for line in lines:
+            # 检查是否包含不支持的规则类型
+            if not any(rule in line for rule in unsupported_rules):
+                processed_lines.append(line)
+                
+        # 重新组合成字符串
         return '\n'.join(processed_lines)
 
 def ensure_directory(filepath: str) -> None:
