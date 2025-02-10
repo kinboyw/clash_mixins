@@ -5,6 +5,10 @@ on:
     - cron: '0 */12 * * *' # 每12小时运行一次
   workflow_dispatch:      # 允许手动触发
 
+permissions:
+  contents: write  # 允许写权限，支持推送
+  pull-requests: write  # 如果需要处理拉取请求，也可以为它授予写权限
+
 jobs:
   sync:
     runs-on: ubuntu-latest
