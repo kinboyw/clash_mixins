@@ -1,0 +1,4 @@
+rules:
+  - url: https://ruleset.skk.moe/Clash/non_ip/reject-drop.txt
+    output: Clash/non_ip/reject-drop.txt
+  # 可以添加更多规则...
