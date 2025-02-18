@@ -1,7 +1,7 @@
 #########################################
 # Sukka's Ruleset - Large Files Hosting Domains
-# Last Updated: 2025-02-17T13:58:34.920Z
-# Size: 635
+# Last Updated: 2025-02-18T01:23:04.980Z
+# Size: 636
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -63,6 +63,7 @@ security.debian.org
 +.deb.debian.org
 +.ftp2.de.debian.org
 static.adtidy.org
+cdn.fwupd.org
 downloads.xiph.org
 cdimage.kali.org
 download.gimp.org
