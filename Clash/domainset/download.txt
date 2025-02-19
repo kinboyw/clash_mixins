@@ -1,7 +1,7 @@
 #########################################
 # Sukka's Ruleset - Large Files Hosting Domains
-# Last Updated: 2025-02-18T01:23:04.980Z
-# Size: 636
+# Last Updated: 2025-02-18T16:43:05.342Z
+# Size: 637
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -158,6 +158,7 @@ dl.tailscale.com
 softwareupdate.pilotmoon.com
 download.parallels.com
 desktop.parallels.com
+update.parallels.com
 mirror.navercorp.com
 +.software-download.microsoft.com
 download.visualstudio.microsoft.com
