@@ -1,7 +1,7 @@
 #########################################
 # Sukka's Ruleset - Reject Non-IP
-# Last Updated: 2025-07-26T15:38:15.729Z
-# Size: 694
+# Last Updated: 2025-07-27T11:53:30.603Z
+# Size: 692
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
