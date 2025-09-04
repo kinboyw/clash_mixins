@@ -1,7 +1,7 @@
 #########################################
 # Sukka's Ruleset - Anti Bogus Domain
-# Last Updated: 2025-08-27T17:09:05.156Z
-# Size: 480
+# Last Updated: 2025-09-03T17:18:32.326Z
+# Size: 476
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
